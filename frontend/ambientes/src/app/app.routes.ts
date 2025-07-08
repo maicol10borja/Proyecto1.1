@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
-import { FooterComponent } from './components/footer/footer';
 import { HomeComponent } from './components/home/home';
 import { NavbarComponent } from './components/navbar/navbar';
+import { FooterComponent } from './components/footer/footer';
 
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'footer', component: FooterComponent },
+  { path: 'footer', component: FooterComponent},
   { path: 'navbar', component: NavbarComponent }
 ];
